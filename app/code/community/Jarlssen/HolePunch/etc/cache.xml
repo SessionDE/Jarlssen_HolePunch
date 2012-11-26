@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <placeholders>
+        
+        <!--<block type="catalog/product_view_type_simple" name="product.info.simple" as="product_type_data" template="catalog/product/view/type/default.phtml">-->
+        <jarlssen_hp_price_simple>
+            <block>catalog/product_view_type_simple</block>
+            <name>product.info.simple</name>
+            <placeholder>JARLSSEN_CACHE_PRICE_SIMPLE</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Price_Simple</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_price_simple>
+        
+        
+        <!--<block type="catalog/product_view_type_configurable" name="product.info.configurable" as="product_type_data" template="catalog/product/view/type/default.phtml">-->
+        <jarlssen_hp_price_config>
+            <block>catalog/product_view_type_configurable</block>
+            <name>product.info.configurable</name>
+            <placeholder>JARLSSEN_CACHE_PRICE_CONFIG</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Price_Configurable</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_price_config>
+        
+        
+        <!--<block type="catalog/product_view_type_configurable" name="product.info.options.configurable" as="options_configurable" before="-" template="catalog/product/view/type/options/configurable.phtml"/>-->
+        <jarlssen_hp_options>
+            <block>catalog/product_view_type_configurable</block>
+            <name>product.info.options.configurable</name>
+            <placeholder>JARLSSEN_CACHE_CONFIG_OPTIONS</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Options_Configurable</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_options>
+        
+        <!--<block type="catalog/product_view" name="product.info.addtocart" as="addtocart" template="catalog/product/view/addtocart.phtml"/>-->
+        <jarlssen_hp_addtocart>
+            <block>catalog/product_view</block>
+            <name>product.info.addtocart</name>
+            <placeholder>JARLSSEN_CACHE_ADDTOCART</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_AddToCart</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_addtocart>
+        
+        
+        <!--<block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">-->
+        <jarlssen_hp_category_price>
+            <block>catalog/product_list</block>
+            <name>product_list</name>
+            <placeholder>JARLSSEN_CACHE_CATEGORY_LIST</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_Category_List</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_category_price>
+        
+        
+        <!--<block type="catalog/product_list" name="search_result_list" template="catalog/product/list.phtml">-->
+        <jarlssen_hp_catalogsearch_result>
+            <block>catalog/product_list</block>
+            <name>search_result_list</name>
+            <placeholder>JARLSSEN_CACHE_CATALOG_SEARCH</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_Search</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_catalogsearch_result>
+    </placeholders>
+</config>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Jarlssen_HolePunch>
+            <version>0.1.1</version>
+        </Jarlssen_HolePunch>
+    </modules>
+    <global>
+        <blocks>
+            <jarlssen_holepunch>
+                <class>Jarlssen_HolePunch_Block</class>
+            </jarlssen_holepunch>
+        </blocks>
+        <helpers>
+            <jarlssen_holepunch>
+                <class>Jarlssen_HolePunch_Helper</class>
+            </jarlssen_holepunch>
+        </helpers>
+    </global>
+<!--	<frontend>
+            <layout>
+                <updates>
+                    <jarlssen_holepunch>
+                        <file>jarlssen/holepunch.xml</file>
+                    </jarlssen_holepunch>
+                </updates>
+            </layout>
+	</frontend>-->
+</config>
