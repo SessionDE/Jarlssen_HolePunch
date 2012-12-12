@@ -1,0 +1,6 @@
+# Jarlssen_HolePunch module structure
+app/code/community/Jarlssen/Holepunch               app/code/community/Jarlssen/Holepunch/
+app/etc/modules/Jarlssen_HolePunch.xml              app/etc/modules/Jarlssen_HolePunch.xml
+app/design/frontend/enterprise/default/layout/*     app/design/frontend/enterprise/default/layout/
+app/design/frontend/enterprise/default/template/*   app/design/frontend/enterprise/default/template/
+
