@@ -9,7 +9,7 @@ class Jarlssen_HolePunch_Model_Container_Cache_Price_Simple extends Enterprise_P
      */
     protected function _getCacheId()
     {
-        return 'JARLSSEN_CACHE_PRICE_SIMPLE'
+        return 'JARLSSEN_CACHE_PRICE_SIMPLE_'
             . md5($this->_placeholder->getAttribute('cache_id')
                     . '_' . $this->_getCategoryId()
                     . '_' . $this->_getProductId()
@@ -27,7 +27,7 @@ class Jarlssen_HolePunch_Model_Container_Cache_Price_Simple extends Enterprise_P
         #$blockClass = $this->_placeholder->getAttribute('block');
         $template = $this->_placeholder->getAttribute('template');
 
-        $productBlock = Mage::app()->getLayout()->createBlock('jarlssen_holepunch/catalog_product_view');
+        $productBlock = Mage::app()->getLayout()->createBlock('jarlssen_holepunch/catalog_product_view_type_simple');
         $productBlock->setProduct($product);
         
         
