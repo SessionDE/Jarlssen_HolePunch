@@ -1,6 +1,6 @@
 <?php
 
-class Jarlssen_HolePunch_Model_Container_Cache_Options_Configurable extends Enterprise_PageCache_Model_Container_Abstract {
+class Jarlssen_HolePunch_Model_Container_Cache_Catalog_Product_View_Type_Configurable_Price extends Enterprise_PageCache_Model_Container_Abstract {
 
     /**
      * Get cache identifier
@@ -9,9 +9,8 @@ class Jarlssen_HolePunch_Model_Container_Cache_Options_Configurable extends Ente
      */
     protected function _getCacheId()
     {
-        return 'JARLSSEN_CACHE_CONFIG_OPTIONS'
+        return 'JARLSSEN_CACHE_CONFIG_PRICE_'
             . md5($this->_placeholder->getAttribute('cache_id')
-                    . '_' . $this->_getCategoryId()
                     . '_' . $this->_getProductId()
             );
     }
@@ -27,14 +26,14 @@ class Jarlssen_HolePunch_Model_Container_Cache_Options_Configurable extends Ente
         #$blockClass = $this->_placeholder->getAttribute('block');
         $template = $this->_placeholder->getAttribute('template');
 
-        $productBlock = Mage::app()->getLayout()->createBlock('jarlssen_holepunch/catalog_product_options');
+        $productBlock = Mage::app()->getLayout()->createBlock('jarlssen_holepunch/catalog_product_view_type_configurable_view');
         $productBlock->setProduct($product);
         
         
         /*
          *  overrides default template 
          */
-        $productBlock->setTemplate('jarlssen/holepunch/configurable/options.phtml');
+        $productBlock->setTemplate('jarlssen/holepunch/price.phtml');
         
         
         /*

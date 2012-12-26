@@ -1,6 +1,0 @@
-<?php
-
-class Jarlssen_HolePunch_Block_Catalog_Product_Options extends Mage_Catalog_Block_Product_View_Type_Configurable
-{
-
-}
