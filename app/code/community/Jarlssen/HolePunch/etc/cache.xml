@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <placeholders>
-        
+
+        <!-- add to cart block -->
+        <!--<block type="catalog/product_view" name="product.info.addtocart" as="addtocart" template="catalog/product/view/addtocart.phtml"/>-->
+        <jarlssen_hp_addtocart>
+            <block>catalog/product_view</block>
+            <name>product.info.addtocart</name>
+            <placeholder>JARLSSEN_CACHE_ADDTOCART</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_Product_AddToCart</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_addtocart>
+
+        <!-- configurable product options block -->
+        <!--<block type="catalog/product_view_type_configurable" name="product.info.options.configurable" as="options_configurable" before="-" template="catalog/product/view/type/options/configurable.phtml"/>-->
+        <jarlssen_hp_options>
+            <block>catalog/product_view_type_configurable</block>
+            <name>product.info.options.configurable</name>
+            <placeholder>JARLSSEN_CACHE_CONFIG_OPTIONS</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_Product_View_Type_Configurable_Options</container>
+            <cache_lifetime>1</cache_lifetime>
+        </jarlssen_hp_options>
+
+        <!-- configurable product price block -->
+        <!--<block type="catalog/product_view_type_configurable" name="product.info.configurable" as="product_type_data" template="catalog/product/view/type/default.phtml">-->
+        <jarlssen_hp_price_config>
+            <block>catalog/product_view_type_configurable</block>
+            <name>product.info.configurable</name>
+            <placeholder>JARLSSEN_CACHE_CONFIG_PRICE</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_Product_View_Type_Configurable_Price</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_price_config>
+
+
+        <!-- simple product price block -->
         <!--<block type="catalog/product_view_type_simple" name="product.info.simple" as="product_type_data" template="catalog/product/view/type/default.phtml">-->
         <jarlssen_hp_price_simple>
             <block>catalog/product_view_type_simple</block>
@@ -10,35 +42,17 @@
             <container>Jarlssen_HolePunch_Model_Container_Cache_Price_Simple</container>
             <cache_lifetime>86400</cache_lifetime>
         </jarlssen_hp_price_simple>
-        
-        
-        <!--<block type="catalog/product_view_type_configurable" name="product.info.configurable" as="product_type_data" template="catalog/product/view/type/default.phtml">-->
-        <jarlssen_hp_price_config>
-            <block>catalog/product_view_type_configurable</block>
-            <name>product.info.configurable</name>
-            <placeholder>JARLSSEN_CACHE_PRICE_CONFIG</placeholder>
-            <container>Jarlssen_HolePunch_Model_Container_Cache_Price_Configurable</container>
+
+
+        <!-- virtual product price block -->
+        <!--<block type="catalog/product_view_type_virtual" name="product.info.virtual" as="product_type_data" template="catalog/product/view/type/default.phtml">-->
+        <jarlssen_hp_price_virtual>
+            <block>catalog/product_view_type_virtual</block>
+            <name>product.info.virtual</name>
+            <placeholder>JARLSSEN_CACHE_PRICE_VIRTUAL</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Price_Virtual</container>
             <cache_lifetime>86400</cache_lifetime>
-        </jarlssen_hp_price_config>
-        
-        
-        <!--<block type="catalog/product_view_type_configurable" name="product.info.options.configurable" as="options_configurable" before="-" template="catalog/product/view/type/options/configurable.phtml"/>-->
-        <jarlssen_hp_options>
-            <block>catalog/product_view_type_configurable</block>
-            <name>product.info.options.configurable</name>
-            <placeholder>JARLSSEN_CACHE_CONFIG_OPTIONS</placeholder>
-            <container>Jarlssen_HolePunch_Model_Container_Cache_Options_Configurable</container>
-            <cache_lifetime>86400</cache_lifetime>
-        </jarlssen_hp_options>
-        
-        <!--<block type="catalog/product_view" name="product.info.addtocart" as="addtocart" template="catalog/product/view/addtocart.phtml"/>-->
-        <jarlssen_hp_addtocart>
-            <block>catalog/product_view</block>
-            <name>product.info.addtocart</name>
-            <placeholder>JARLSSEN_CACHE_ADDTOCART</placeholder>
-            <container>Jarlssen_HolePunch_Model_Container_Cache_AddToCart</container>
-            <cache_lifetime>86400</cache_lifetime>
-        </jarlssen_hp_addtocart>
+        </jarlssen_hp_price_virtual>
         
         
         <!--<block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">-->
