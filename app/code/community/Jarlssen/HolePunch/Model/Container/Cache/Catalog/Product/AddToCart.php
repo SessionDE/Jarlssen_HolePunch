@@ -1,6 +1,6 @@
 <?php
 
-class Jarlssen_HolePunch_Model_Container_Cache_AddToCart extends Enterprise_PageCache_Model_Container_Abstract {
+class Jarlssen_HolePunch_Model_Container_Cache_Catalog_Product_AddToCart extends Enterprise_PageCache_Model_Container_Abstract {
 
     /**
      * Get cache identifier
@@ -9,9 +9,8 @@ class Jarlssen_HolePunch_Model_Container_Cache_AddToCart extends Enterprise_Page
      */
     protected function _getCacheId()
     {
-        return 'JARLSSEN_CACHE_ADDTOCART'
+        return 'JARLSSEN_CACHE_ADDTOCART_'
             . md5($this->_placeholder->getAttribute('cache_id')
-                    . '_' . $this->_getCategoryId()
                     . '_' . $this->_getProductId()
             );
     }
@@ -27,7 +26,7 @@ class Jarlssen_HolePunch_Model_Container_Cache_AddToCart extends Enterprise_Page
         #$blockClass = $this->_placeholder->getAttribute('block');
         $template = $this->_placeholder->getAttribute('template');
 
-        $productBlock = Mage::app()->getLayout()->createBlock('jarlssen_holepunch/catalog_product_view');
+        $productBlock = Mage::app()->getLayout()->createBlock('jarlssen_holepunch/catalog_product_view_addToCart');
         $productBlock->setProduct($product);
         
         
