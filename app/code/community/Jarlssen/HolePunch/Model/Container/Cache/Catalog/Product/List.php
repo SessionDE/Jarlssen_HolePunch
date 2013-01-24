@@ -1,6 +1,6 @@
 <?php
 
-class Jarlssen_HolePunch_Model_Container_Cache_Catalog_Category_List extends Enterprise_PageCache_Model_Container_Abstract {
+class Jarlssen_HolePunch_Model_Container_Cache_Catalog_Product_List extends Enterprise_PageCache_Model_Container_Abstract {
 
     /**
      * Get cache identifier
@@ -9,7 +9,7 @@ class Jarlssen_HolePunch_Model_Container_Cache_Catalog_Category_List extends Ent
      */
     protected function _getCacheId()
     {
-        return 'JARLSSEN_CACHE_CATEGORY_LIST'
+        return 'JARLSSEN_CACHE_CATALOG_PRODUCT_LIST'
             . md5($this->_placeholder->getAttribute('cache_id')
                     . '_' . $this->_getCategoryId()
             );
@@ -18,9 +18,14 @@ class Jarlssen_HolePunch_Model_Container_Cache_Catalog_Category_List extends Ent
 
     protected function _renderBlock()
     {
-        $categoryId = $this->_getCategoryId();
-        
-        $category = Mage::getSingleton('catalog/category')->load($categoryId);
+
+        if(Mage::app()->getRequest()->getParam('cat')){
+
+            $categoryId = (int) Mage::app()->getRequest()->getParam('cat');
+        }else{
+            $categoryId = $this->_getCategoryId();
+        }
+        Zend_Debug::dump($categoryId, 'asdasd');
 
         $blockClass = $this->_placeholder->getAttribute('block');
         $template = $this->_placeholder->getAttribute('template');
@@ -38,7 +43,12 @@ class Jarlssen_HolePunch_Model_Container_Cache_Catalog_Category_List extends Ent
         if ($category->getId()) {
             $layer->setCurrentCategory($category);
         }
-        
+        /* getLayer()->getState()->getFilters() */
+        //Zend_Debug::dump($layer->prepareProductCollection(), 'productBlock');
+
+        #Zend_Debug::dump($productBlock->getToolbarBlock(), 'productBlock');
+
+
         /*
          *  overrides default template 
          */
@@ -48,8 +58,7 @@ class Jarlssen_HolePunch_Model_Container_Cache_Catalog_Category_List extends Ent
         /*
          *  overrides default template 
          */
-        //$productBlock = Mage::app()->getLayout()->createBlock($blockClass);
-        //$productBlock->setTemplate($template);
+        #$productBlock->setTemplate($template);
         
         return $productBlock->toHtml();
         
