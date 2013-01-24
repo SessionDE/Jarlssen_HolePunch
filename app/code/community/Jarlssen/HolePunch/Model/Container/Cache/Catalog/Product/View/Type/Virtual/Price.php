@@ -1,6 +1,6 @@
 <?php
 
-class Jarlssen_HolePunch_Model_Container_Cache_Price_Virtual extends Enterprise_PageCache_Model_Container_Abstract {
+class Jarlssen_HolePunch_Model_Container_Cache_Catalog_Product_View_Type_Virtual_Price extends Enterprise_PageCache_Model_Container_Abstract {
 
     /**
      * Get cache identifier
@@ -29,27 +29,27 @@ class Jarlssen_HolePunch_Model_Container_Cache_Price_Virtual extends Enterprise_
 
         $productBlock = Mage::app()->getLayout()->createBlock('jarlssen_holepunch/catalog_product_view_type_virtual');
         $productBlock->setProduct($product);
-        
-        
+
+
         /*
          *  overrides default template 
          */
         $productBlock->setTemplate('jarlssen/holepunch/price.phtml');
-        
-        
+
+
         /*
          *  overrides default template 
          */
         #$productPrice->setTemplate($template);
-        
+
         return $productBlock->toHtml();
-        
+
     }
 
-    protected function _saveCache($data, $id, $tags = array(), $lifetime = null) 
-    { 
-        return false; 
-        
-    }   
+    protected function _saveCache($data, $id, $tags = array(), $lifetime = null)
+    {
+        return false;
+
+    }
 
 }
