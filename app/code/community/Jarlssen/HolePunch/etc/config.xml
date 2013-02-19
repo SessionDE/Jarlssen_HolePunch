@@ -10,6 +10,11 @@
             <jarlssen_holepunch>
                 <class>Jarlssen_HolePunch_Block</class>
             </jarlssen_holepunch>
+            <catalog>
+                <rewrite>
+                    <product_list>Jarlssen_HolePunch_Block_Catalog_Product_List</product_list>
+                </rewrite>
+            </catalog>
         </blocks>
         <helpers>
             <jarlssen_holepunch>
