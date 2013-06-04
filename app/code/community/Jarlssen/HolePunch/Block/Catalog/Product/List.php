@@ -50,16 +50,34 @@
 class Jarlssen_HolePunch_Block_Catalog_Product_List extends Mage_Catalog_Block_Product_List
 {
 
-    /*
+    /**
      *  class of the child block called in catalog/product/view.phtml template
      */
     protected $_defaultItemPriceBlock = 'jarlssen_holepunch/catalog_product_list_item_price';
 
-    /*
+    /**
      *  name in layout that is reference name for hole puncher
      */
     protected $_defaultItemPriceBlockName = 'catalog.product.list.item.price';
 
+
+    /**
+     *  Overrided template file loaded in layout
+     */
+    protected $_defaulTemplate = 'jarlssen/holepunch/catalog/product/list.phtml';
+
+
+    /**
+     * Override default template from here so we don't make any mess in layout.xml
+     *
+     * @param string $template
+     * @return Mage_Core_Block_Template
+     */
+    public function setTemplate($template)
+    {
+        $this->_template = $this->_defaulTemplate;
+        return $this;
+    }
 
     /*
      *
