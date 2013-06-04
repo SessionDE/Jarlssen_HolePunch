@@ -13,6 +13,7 @@
             <catalog>
                 <rewrite>
                     <product_list>Jarlssen_HolePunch_Block_Catalog_Product_List</product_list>
+                    <product_view_type_grouped>Jarlssen_HolePunch_Block_Catalog_Product_View_Type_Grouped</product_view_type_grouped>
                 </rewrite>
             </catalog>
         </blocks>
