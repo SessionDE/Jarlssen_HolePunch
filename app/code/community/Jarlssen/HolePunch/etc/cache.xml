@@ -53,16 +53,32 @@
             <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_Product_View_Type_Virtual_Price</container>
             <cache_lifetime>86400</cache_lifetime>
         </jarlssen_hp_price_virtual>
-        
-        
+
+        <jarlssen_hp_catalog_product_list_price>
+            <block>jarlssen_holepunch/catalog_product_list_item_price</block>
+            <name>catalog.product.list.item.price</name>
+            <placeholder>JARLSSEN_CACHE_CATALOG_PRODUCT_LIST_ITEM_PRICE</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_ProductListPrice</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_catalog_product_list_price>
+
+        <jarlssen_hp_catalog_product_grouped_price>
+            <block>jarlssen_holepunch/catalog_product_grouped_item_price</block>
+            <name>catalog.product.grouped.item.price</name>
+            <placeholder>JARLSSEN_CACHE_CATALOG_PRODUCT_GROUPED_ITEM_PRICE</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_ProductListPrice</container>
+            <cache_lifetime>86400</cache_lifetime>
+        </jarlssen_hp_catalog_product_grouped_price>
+
         <!--<block type="catalog/product_list" name="product_list" template="catalog/product/list.phtml">-->
-        <jarlssen_hp_category_price>
+        <!--jarlssen_hp_category_price>
             <block>catalog/product_list</block>
-            <name>product_list</name>
+            <name>product_list_child</name>
             <placeholder>JARLSSEN_CACHE_CATALOG_PRODUCT_LIST</placeholder>
             <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_Product_List</container>
             <cache_lifetime>86400</cache_lifetime>
-        </jarlssen_hp_category_price>
+        </jarlssen_hp_category_price-->
+
 
         <!--<block type="catalog/product_list" name="search_result_list" template="catalog/product/list.phtml">-->
         <!--<jarlssen_hp_catalogsearch_result>-->
@@ -73,14 +89,14 @@
             <!--<cache_lifetime>86400</cache_lifetime>-->
         <!--</jarlssen_hp_catalogsearch_result>-->
 
-        <!--block type="catalog/layer_view" name="catalog.leftnav" before="-" template="catalog/layer/view.phtml"/-->
-        <jarlssen_hp_catalog_layer_view>
-            <block>catalog/layer_view</block>
-            <name>catalog.leftnav</name>
-            <placeholder>JARLSSEN_CACHE_CATALOG_LAYER_VIEW</placeholder>
-            <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_Layer_Viewx</container>
+        <!--block type="catalog/category_view" name="category.products" template="catalog/category/view.phtml"-->
+        <!--jarlssen_hp_category>
+            <block>catalog/category_view</block>
+            <name>category.products</name>
+            <placeholder>JARLSSEN_CACHE_CATALOG_CATEGORY</placeholder>
+            <container>Jarlssen_HolePunch_Model_Container_Cache_Catalog_Category</container>
             <cache_lifetime>86400</cache_lifetime>
-        </jarlssen_hp_catalog_layer_view>
+        </jarlssen_hp_category-->
 
     </placeholders>
 </config>
